@@ -28,19 +28,16 @@ router.post('/burgers/add', function (req, res) {
 
 
 router.put("/burgers/devour/:id", function (req, res) {
-	var condition = "id = " + req.params.id;
+	var condition = req.params.id;
 
 	console.log("condition", condition);
 
-	burger.updateOne({
-		devoured: req.body.devoured
-	}, condition, function (result) {
-		if (result.changedRows == 0) {
-			// If no rows were changed, then the ID must not exist, so 404
-			return res.status(404).end();
-		} else {
-			res.status(200).end();
-		}
-	});
+	burger.update(condition, function(result) {
+			if (result.changedRows == 0) {
+				// If no rows were changed, then the ID must not exist, so 404
+				return res.status(404).end();
+			}
+			res.sendStatus(200);
+		});
 });
 module.exports = router;

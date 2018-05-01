@@ -8,8 +8,8 @@
         <div class="col-sm-6">
             <h2>Burgers to Eat!</h2>
             {{#each burgers}} {{#unless this.devoured}}
-            <form id="update" action="/burgers/devour/{{this.id}}?_method=PUT" method="POST">
-                <input type="hidden" name="devoured" value="true">
+            <form id="update">
+                <input id="updateDev" type="hidden" name="devoured" value= {{this.id}}>
                 <button class="btn btn-danger" type="submit">Devour it!</button>
             </form>
             <div class="well">
