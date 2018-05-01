@@ -1,8 +1,8 @@
 <div class="container">
 
-    <img src="assets/img/burger.png">
     <h1>Eat-Da-Burger!</h1>
-
+    <img src="./assets/images/burger.jpg">
+    
     <div class="row">
 
         <div class="col-sm-6">
@@ -11,6 +11,7 @@
             <form id="update">
                 <input id="updateDev" type="hidden" name="devoured" value= {{this.id}}>
                 <button class="btn btn-danger" type="submit">Devour it!</button>
+                <button class="delete-burger" data-id="{{this.id}}">DELETE!</button>
             </form>
             <div class="well">
                 {{this.id}}. {{this.burger_name}}
@@ -21,8 +22,11 @@
         <div class="col-sm-6">
             <h2>Burgers Devoured!</h2>
             {{#each burgers}} {{#if this.devoured}}
+                <button class="delete-burger" data-id="{{this.id}}">DELETE!</button>
+            
             <div class="well devoured">
                 {{this.id}}. {{this.burger_name}}
+                
             </div>
             {{/if}} {{/each}}
         </div>
@@ -33,6 +37,7 @@
 
     <form id="add" action="/burgers/add" method="POST">
         <textarea name="burger_name"></textarea>
+        
         <button class="btn btn-warning" type="submit">Submit</button>
     </form>
 
