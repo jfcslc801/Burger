@@ -11,7 +11,7 @@ Eat-Da-Burger! is a burger logger created with MySQL, Node, Express, Handlebars 
 
 
 ## Demo Videos
-![eatdaburger](https://user-images.githubusercontent.com/32500591/39540787-f6f1e5f8-4e00-11e8-8234-9e3f92c78d48.gif)
+![eat-da-burger](https://user-images.githubusercontent.com/32500591/39541264-74b65cc0-4e02-11e8-8d18-aefac77f3360.gif)
 
 
 ## Technologies used
