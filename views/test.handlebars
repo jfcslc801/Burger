@@ -1,12 +1,9 @@
-<div class="wrapper">
-  <header class="header">
+<div class="container">
 
-      
-  </header>
-  {{!-- <article class="main">
-    <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>  
-  </article> --}}
-  <aside class="aside aside-1">    <div class="row">
+   
+    
+    <div class="row">
+    <img src="./assets/images/burger.jpg">
 
         <div class="col-sm-6">
             <h2>Burgers to Devour!</h2>
@@ -22,8 +19,6 @@
             {{/unless}} {{/each}}
         </div>
 
-    </div></aside>
-  <aside class="aside aside-2">    <div class="row">
         <div class="col-sm-6 dev" >
             <h2>Devoured!</h2>
             {{#each burgers}} {{#if this.devoured}}
@@ -36,12 +31,97 @@
             {{/if}} {{/each}}
         </div>
 
-    </div></aside>
-  <footer class="footer">    <h2>Place your order.</h2>
+    </div>
+
+    <h2>Place your order.</h2>
 
     <form id="add" action="/burgers/add" method="POST">
         <textarea name="burger_name"></textarea>
         
         <button class="btn btn-warning" type="submit">Submit</button>
-    </form></footer>
+    </form>
+
 </div>
+
+
+
+
+
+
+
+img {
+	display: block;
+	margin: 0 auto;
+	max-width: 50%;
+	height: auto;
+}
+
+/* .dev{
+	display: block;
+} */
+
+html, body, .container {
+	height: 100%;
+}
+
+
+/* html, body, .container {
+	height: 100%;
+}
+
+body {
+	background-color: #18afe6;
+	color: #fff;
+}
+
+
+
+h1 {
+	font-size: 40px;
+}
+
+h2 {
+	font-size: 24px;
+}
+
+h1, h2 {
+	text-align: center;
+}
+
+button {
+	margin-top: 15px;
+	margin-right: 15px;
+}
+
+#update {
+	float: left;
+}
+
+#add {
+	display: block;
+	text-align: center;
+	height: 10%;
+}
+
+#add>textarea {
+	width: 60%;
+	height: 100%;
+	color: #e64f18;
+	padding: 19px;
+}
+
+#add>button {
+	display: block;
+	margin: 0 auto;
+	margin-bottom: 50px;
+}
+
+.well {
+	float: left;
+	width: 75%;
+	color: #e64f18;
+}
+
+.devoured {
+	width: 100%;
+} */

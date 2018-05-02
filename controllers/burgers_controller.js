@@ -19,12 +19,6 @@ router.post('/burgers/add', function (req, res) {
 	});
 });
 
-// router.put('/burgers/devour/', function (req, res) {
-// 	var condition = 'id = ' + req.params.id;
-// 	burger.updateOne({ devoured: req.body.devoured }, condition, function () {
-// 		res.redirect('/burgers');
-// 	});
-// });
 
 
 router.put("/burgers/devour/:id", function (req, res) {
